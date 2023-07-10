@@ -14,7 +14,7 @@ projects that will appear later on in the cursus.*
 
 [![faaraujo's 42 stats](https://badge42.vercel.app/api/v2/clgrr2va0002108jo3cc5foww/stats?cursusId=21&coalitionId=112)](https://github.com/JaeSeoKim/badge42)
 
-### [Specifications]()
+### [Specifications](https://github.com/faleite/42_pipex/blob/main/dcs/000_subject.md)
 
 ### Articles
 1.
