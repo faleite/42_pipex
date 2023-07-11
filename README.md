@@ -14,13 +14,11 @@ projects that will appear later on in the cursus.*
 
 ### [Specifications](https://github.com/faleite/42_pipex/blob/main/dcs/000_subject.md)
 
-<!-- ### Articles
-1.
-2.
-3.
+### Articles
 
-### Build
+1. [Unix Processes in C](https://code-vault.net/course/46qpfr4tkz:1603732431896)
+
+<!-- ### Build
 1.
 2.
-3.
- -->
+3. -->
