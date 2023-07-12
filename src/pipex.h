@@ -6,12 +6,16 @@
 /*   By: faaraujo <faaraujo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:18:23 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/11 21:29:58 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/12 22:10:55 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
 # define PIPEX_H
+
+# define READ_END 0 // index extremo da leitura do pipe
+# define WRITE_END 1 // index extremo da escrita do pipe
+# define FILE_NAME "file.txt" // nome do ficheiro  a escrever
 
 # include <stdio.h>// perror
 # include <stdlib.h>// exit, malloc, free, execve, wait, waitpid

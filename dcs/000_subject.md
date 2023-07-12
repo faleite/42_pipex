@@ -3,8 +3,6 @@
 - Este projeto permitirá que você descubra em detalhes um mecanismo UNIX que você já conhece usando-o em seu programa.
 - Este projeto é sobre o manuseio de pipes.
 
-# Links
-
 ## 1. [Guia abrangente para Pipex](https://reactive.so/post/42-a-comprehensive-guide-to-pipex)
 
 ## Complemento:

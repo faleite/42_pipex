@@ -19,6 +19,10 @@ projects that will appear later on in the cursus.*
 1. [Unix Processes in C](https://code-vault.net/course/46qpfr4tkz:1603732431896)
 2. here doc
 
+# Links
+- [Comunicar dois processos com um pipe](https://youtu.be/l-UhKLdh4aY)
+    - [Imagem](https://github.com/WhileTrueThenDream/ExamplesCLinuxUserSpace/blob/master/ejercicio2proc1pipe.png)
+
 <!-- ### Build
 1.
 2.
