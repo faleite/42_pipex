@@ -4,6 +4,7 @@
 - Este projeto é sobre o manuseio de pipes.
 
 ## 1. [Guia abrangente para Pipex](https://reactive.so/post/42-a-comprehensive-guide-to-pipex)
+## 2. [Pipex Tutorial](https://csnotes.medium.com/pipex-tutorial-42-project-4469f5dd5901)
 
 ## Complemento:
 
@@ -157,4 +158,18 @@ O funcionamento do `pipe()` é o seguinte:
 
 O pipe é frequentemente usado como um meio de comunicação entre processos pai e filho ou entre processos independentes. Ele permite que os processos compartilhem informações de forma simples e eficiente por meio do canal de comunicação estabelecido pelo pipe.
 
-## 2. [Pipex Tutorial](https://csnotes.medium.com/pipex-tutorial-42-project-4469f5dd5901)
+### envp[]
+```c
+#include <stdio.h>
+
+// envp[] e um array de strings que contem as variaveis de ambiente
+int main(int argc, char *argv[], char *envp[])
+{
+	for (int i=0; envp[i] != NULL; i++)
+	{
+		// imprime cada variavel de ambiente
+		printf("%s\n", envp[i]);
+	}
+	return (0);
+}
+```
