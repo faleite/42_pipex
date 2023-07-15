@@ -1,6 +1,16 @@
 #include "pipex.h"
 
-int	main(int argc, char *argv[])
+typedef struct s_data
+{
+	int	pipe_fd[2]; /* array de file descriptors para o pipe */
+	int	in_fd; /* file descriptor para o ficheiro a ler */
+	int	out_fd; /* file descriptor para o ficheiro a escrever */
+	int	status; /* para o wait pai */
+	pid_t	pid1; /* para o fork (indicador de processos dos filhos) */
+	pid_t	pid2; /* para o fork (indicador de processos dos filhos) */
+}	t_data;
+
+int	main(int argc, char *argv[], char *envp[])
 {
 	int fd1[2]; /* array de file descriptors para o pipe */
 	int fd2; /* file descriptor para o ficheiro a escrever */

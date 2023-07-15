@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:18:23 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/12 22:10:55 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/15 19:08:12 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,27 @@
 # include <sys/wait.h>// wait, waitpid
 
 /* Others */
+
 # include <errno.h>// errno
 # include <string.h>// strerror
 # include <sys/types.h>// wait, waitpid
 # include <sys/stat.h>// access, open, unlink
 # include <stdbool.h>// bool
 # include <sys/errno.h>// errno
+
+typedef struct s_data
+{
+	int	pipe_fd[2]; /* array de file descriptors para o pipe */
+	int	in_fd; /* file descriptor para o ficheiro a ler */
+	int	out_fd; /* file descriptor para o ficheiro a escrever */
+	int	status; /* para o wait pai */
+	pid_t	pid1; /* para o fork (indicador de processos dos filhos) */
+	pid_t	pid2; /* para o fork (indicador de processos dos filhos) */
+}	t_data;
+
+/* UTILS */
+
+int		ft_strlen(char *s);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif /* PIPEX_H */
