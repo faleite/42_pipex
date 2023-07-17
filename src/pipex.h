@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faaraujo <faaraujo@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:18:23 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/15 19:08:12 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/17 20:34:46 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,10 @@ typedef struct s_data
 /* UTILS */
 
 int		ft_strlen(char *s);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_putstr_fd(char *s, int fd);
+void	err_case(char *msg, t_data *data);
+void	init_data(t_data **buff);
+void	using(void);
 
 #endif /* PIPEX_H */
