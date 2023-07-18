@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:18:23 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/17 20:34:46 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/18 20:34:41 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@
 
 typedef struct s_data
 {
+	char	**path_arr;
 	int	pipe_fd[2]; /* array de file descriptors para o pipe */
 	int	in_fd; /* file descriptor para o ficheiro a ler */
 	int	out_fd; /* file descriptor para o ficheiro a escrever */
@@ -44,11 +45,46 @@ typedef struct s_data
 
 /* UTILS */
 
+/**
+ * @brief Computes the length of the string s excluding the terminating null 
+ * byte ('\0').
+ * @param s Pointer of string.
+ * @return Returns the number of bytes in the string pointed to by s.  
+*/
 int		ft_strlen(char *s);
+
+/**
+ * @brief compares only the first (at most) n bytes of s1 and s2. 
+ * @param s1 Pointer of string.
+ * @param s2 Pointer of string.
+ * @param n for comparing len characters
+ * @return an integer greater than, equal to, or less than 0, according as the
+ * string s1 is greater than, equal to, or less than the string s2
+ * The comparison is done using unsigned characters, so that `\200' is greater
+ * than `\0'.
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
+
+/**
+ * @brief Outputs the string ’s’ to the given file descriptor.
+ * @param s The string to output.
+ * @param fd The file descriptor on which to write.
+*/
 void	ft_putstr_fd(char *s, int fd);
 void	err_case(char *msg, t_data *data);
 void	init_data(t_data **buff);
 void	using(void);
+
+/**
+ * @brief Allocates (with malloc(3)) and returns an array of strings obtained by
+ * splitting ’s’ using the character ’c’ as a delimiter
+ * The array must end with a NULL pointer.
+ * @param s The string to be split.
+ * @param c The delimiter character.
+ * @return The array of new strings resulting from the split. NULL if the
+ * allocation fails.
+*/
+char	**ft_split(char const *s, char c);
+char	*strcpys(char *dest, const char *src1, char c, const char *src2);
 
 #endif /* PIPEX_H */

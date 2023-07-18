@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 15:02:35 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/17 20:33:12 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/18 19:16:37 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,3 +74,31 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
+/**
+ * @brief strcpys() function copies the string pointed to by src1 and src2,
+ * to the buffer pointed to by dest.
+ * @return a pointer to the destination string dest.
+ */
+char	*strcpys(char *dest, const char *src1, char c, const char *src2)
+{
+	size_t	i;
+
+	i = 0;
+	while (*src1 != '\0')
+		dest[i++] = *src1++;
+	dest[i++] = c;
+	while (*src2 != '\0')
+		dest[i++] = *src2++;
+	dest[i] = '\0';
+	return (dest);
+}
+
+/*int	main()
+{
+	char s[8];
+	char s1[] = "/bin";
+	char s2[] =	"ls";
+
+	printf("%s", strcpys(s, s1, '/', s2));
+}*/

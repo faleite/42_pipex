@@ -53,15 +53,6 @@ static char	*cpy_word(const char *s, int start, int end, int len)
 	return (word);
 }
 
-/**
- * @brief Allocates (with malloc(3)) and returns an array of strings obtained by
- * splitting ’s’ using the character ’c’ as a delimiter
- * The array must end with a NULL pointer.
- * @param s The string to be split.
- * @param c The delimiter character.
- * @return The array of new strings resulting from the split. NULL if the
- * allocation fails.
-*/
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
