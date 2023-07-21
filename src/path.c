@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 18:33:08 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/18 20:41:09 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/20 21:39:50 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,14 @@ char	*cmd_path(char *envp[], char *cmd)
 	}
 	return (NULL);
 }
-
+/*
+void	free_mem(char **split)
+{
+	while (*split)
+		free(*split++);
+}
+*/
+/*
 int	main(int argc, char *argv[], char *envp[])
 {
 //	char s1[] = "Fabr    ";
@@ -69,3 +76,4 @@ int	main(int argc, char *argv[], char *envp[])
 
 	return (0);
 }
+*/

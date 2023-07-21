@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 19:18:23 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/18 20:34:41 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/20 18:46:49 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,12 @@
 
 typedef struct s_data
 {
-	char	**path_arr;
 	int	pipe_fd[2]; /* array de file descriptors para o pipe */
 	int	in_fd; /* file descriptor para o ficheiro a ler */
 	int	out_fd; /* file descriptor para o ficheiro a escrever */
 	int	status; /* para o wait pai */
+	char	*cmd;
+	char	**args_cmds;
 	pid_t	pid1; /* para o fork (indicador de processos dos filhos) */
 	pid_t	pid2; /* para o fork (indicador de processos dos filhos) */
 }	t_data;
@@ -86,5 +87,7 @@ void	using(void);
 */
 char	**ft_split(char const *s, char c);
 char	*strcpys(char *dest, const char *src1, char c, const char *src2);
+char    *var_path(char *envp[]);
+char	*cmd_path(char *envp[], char *cmd);
 
 #endif /* PIPEX_H */
