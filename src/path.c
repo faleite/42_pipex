@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 18:33:08 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/20 21:39:50 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/21 19:07:50 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,14 @@ int	main(int argc, char *argv[], char *envp[])
 //	char s2[] = "icio";
 //	char **path;
 //	size_t len;
+	t_data *data;
+	
+	init_data(&data);
 
 	(void)argc;
 	(void)argv;
-
-	printf("%s", cmd_path(envp, "cat"));
+	data->args_cmds = ft_split(argv[1], ' ');
+	printf("%s", cmd_path(envp, data->args_cmds[0]));
 
 	return (0);
 }
