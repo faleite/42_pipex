@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faaraujo <faaraujo@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 21:28:51 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/21 21:28:54 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/22 15:55:35 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,15 @@ static char	*cpy_word(const char *s, int start, int end, int len)
 	return (word);
 }
 
+/**
+ * @brief Allocates (with malloc(3)) and returns an array of strings obtained by
+ * splitting ’s’ using the character ’c’ as a delimiter
+ * The array must end with a NULL pointer.
+ * @param s The string to be split.
+ * @param c The delimiter character.
+ * @return The array of new strings resulting from the split. NULL if the
+ * allocation fails.
+*/
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;

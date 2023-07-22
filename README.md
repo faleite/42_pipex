@@ -1,4 +1,11 @@
-# pipex
+```Makefile
+██████╗ ██╗██████╗ ███████╗██╗  ██╗
+██╔══██╗██║██╔══██╗██╔════╝╚██╗██╔╝
+██████╔╝██║██████╔╝█████╗   ╚███╔╝
+██╔═══╝ ██║██╔═══╝ ██╔══╝   ██╔██╗
+██║     ██║██║     ███████╗██╔╝ ██╗
+╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝
+```
 
 **This project aims to deepen your understanding of the two concepts\
 that you already know: Redirections and Pipes.**

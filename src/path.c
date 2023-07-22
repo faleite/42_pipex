@@ -6,31 +6,40 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 18:33:08 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/21 19:07:50 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/22 18:42:54 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-char    *var_path(char *envp[])
+/**
+ * @brief Returns the path variable from the environment
+ * @param envp The environment variable
+*/
+char	*var_path(char *envp[])
 {
-	int i;
-	char *path;
+	char	*path;
+	int		i;
 
-    i = 0;
+	i = 0;
 	path = NULL;
-    while (envp[i])
-    {
-        if (ft_strncmp(envp[i], "PATH=", 5) == 0)
-        {
-            path = envp[i] + 5;
+	while (envp[i])
+	{
+		if (ft_strncmp(envp[i], "PATH=", 5) == 0)
+		{
+			path = envp[i] + 5;
 			return (path);
-        }
+		}
 		i++;
-    }
+	}
 	return (path);
 }
 
+/**
+ * @brief Concatenates the path with the command
+ * @param envp The environment variable
+ * @param cmd The command to be concatenated
+*/
 char	*cmd_path(char *envp[], char *cmd)
 {
 	char	*command;
@@ -54,29 +63,3 @@ char	*cmd_path(char *envp[], char *cmd)
 	}
 	return (NULL);
 }
-/*
-void	free_mem(char **split)
-{
-	while (*split)
-		free(*split++);
-}
-*/
-/*
-int	main(int argc, char *argv[], char *envp[])
-{
-//	char s1[] = "Fabr    ";
-//	char s2[] = "icio";
-//	char **path;
-//	size_t len;
-	t_data *data;
-	
-	init_data(&data);
-
-	(void)argc;
-	(void)argv;
-	data->args_cmds = ft_split(argv[1], ' ');
-	printf("%s", cmd_path(envp, data->args_cmds[0]));
-
-	return (0);
-}
-*/

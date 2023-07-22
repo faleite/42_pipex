@@ -6,12 +6,18 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 15:02:35 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/21 19:24:21 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/22 15:41:49 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
+/**
+ * @brief Computes the length of the string s excluding the terminating null 
+ * byte ('\0').
+ * @param s Pointer of string.
+ * @return Returns the number of bytes in the string pointed to by s.  
+*/
 int	ft_strlen(char *s)
 {
 	int	i;
@@ -22,41 +28,26 @@ int	ft_strlen(char *s)
 	return (i);
 }
 
+/**
+ * @brief Outputs the string ’s’ to the given file descriptor.
+ * @param s The string to output.
+ * @param fd The file descriptor on which to write.
+*/
 void	ft_putstr_fd(char *s, int fd)
 {
 	write(fd, s, ft_strlen(s));
 }
 
-void	err_case(char *msg, t_data *data)
-{
-	perror(msg);
-	free(data);
-	if (data->in_fd > 0)
-		close(data->in_fd);
-	if (data->out_fd > 0)
-		close(data->out_fd);
-	exit(EXIT_FAILURE);
-}
-
-void	init_data(t_data **buff)
-{
-	t_data	*data;
-
-	data = malloc(sizeof(t_data));
-	if (!data)
-		exit(EXIT_FAILURE);
-	data->in_fd = -1;
-	data->out_fd = -1;
-	*buff = data;
-}
-
-void	using(void)
-{
-		ft_putstr_fd("Error: wrong number of arguments\n", 2);
-		ft_putstr_fd("Use ./prog infile cmd1 cmd2 outfile\n", 2);
-		exit(EXIT_FAILURE);
-}
-
+/**
+ * @brief compares only the first (at most) n bytes of s1 and s2. 
+ * @param s1 Pointer of string.
+ * @param s2 Pointer of string.
+ * @param n for comparing len characters
+ * @return an integer greater than, equal to, or less than 0, according as the
+ * string s1 is greater than, equal to, or less than the string s2
+ * The comparison is done using unsigned characters, so that `\200' is greater
+ * than `\0'.
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t			i;
@@ -93,12 +84,3 @@ char	*strcpys(char *dest, const char *src1, char c, const char *src2)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*int	main()
-{
-	char s[8];
-	char s1[] = "/bin";
-	char s2[] =	"ls";
-
-	printf("%s", strcpys(s, s1, '/', s2));
-}*/
