@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 15:35:06 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/22 15:52:27 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/23 18:44:49 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,11 @@ void	init_data(t_data **buff)
 /**
  * @brief The function prints the error message
  * for the wrong number of arguments
+ * More message you can added:
+ * ft_putstr_fd("Error: wrong number of arguments\n", 1);
 */
 void	using(void)
 {
-	ft_putstr_fd("Error: wrong number of arguments\n", 1);
 	ft_putstr_fd("Use ./prog infile cmd0 cmd2 outfile\n", 2);
 	exit(EXIT_FAILURE);
 }

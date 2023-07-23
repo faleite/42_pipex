@@ -158,7 +158,7 @@ O funcionamento do `pipe()` é o seguinte:
 
 O pipe é frequentemente usado como um meio de comunicação entre processos pai e filho ou entre processos independentes. Ele permite que os processos compartilhem informações de forma simples e eficiente por meio do canal de comunicação estabelecido pelo pipe.
 
-### envp[]
+### envp[ ]
 ```c
 #include <stdio.h>
 

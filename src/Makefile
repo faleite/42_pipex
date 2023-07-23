@@ -47,6 +47,7 @@ $(NAME): $(OBJ)
 		@echo "╚═╝     ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝"
 		@echo "====================================\n$(CLR_RESET)"
 		@echo "$(GREEN)Compiling of $(RED)$(NAME)...$(CLR_RESET)"
+		@touch infile
 		@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 		@echo "$(RED)$(NAME) $(GREEN)is ready!$(CLR_RESET)\n"
 		@echo "$(PURPLE)====================================$(CLR_RESET)"
@@ -57,6 +58,7 @@ clean:
 
 fclean: clean
 		@rm -f $(NAME)
+		@rm -f outfile infile
 		@echo "$(RED)$(NAME) $(GREEN)has been deleted.$(CLR_RESET)\n"
 
 re: fclean all

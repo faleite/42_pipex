@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 18:33:08 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/22 18:42:54 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/23 20:43:49 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ char	*cmd_path(char *envp[], char *cmd)
 	size_t	p_len;
 	size_t	c_len;
 
+	if (access(cmd, F_OK) == 0)
+		return (cmd);
 	path_arr = ft_split(var_path(envp), ':');
 	command = NULL;
 	while (*path_arr != NULL)
