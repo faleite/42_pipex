@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 18:33:08 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/25 18:51:45 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/25 18:57:39 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,3 @@ char	*cmd_path(char *envp[], char *cmd)
 	}
 	return (NULL);
 }
-

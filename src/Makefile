@@ -10,7 +10,7 @@
 .SILENT: # Deixas de exibir as mensagens de execucao no terminal.
 NAME = pipex
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror #-g -fsanitize=address
 
 ###############################################################################
 #				MAKEFILE RULES	                              #
