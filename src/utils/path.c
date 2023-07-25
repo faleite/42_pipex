@@ -6,11 +6,11 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 18:33:08 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/23 20:43:49 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/25 18:51:45 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "../include/pipex.h"
 
 /**
  * @brief Returns the path variable from the environment
@@ -65,3 +65,4 @@ char	*cmd_path(char *envp[], char *cmd)
 	}
 	return (NULL);
 }
+

@@ -6,11 +6,11 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 14:19:34 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/23 20:50:14 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/25 18:40:07 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "./include/pipex.h"
 
 /**
  * 1. cria o primeiro filho

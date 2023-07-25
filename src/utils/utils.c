@@ -6,11 +6,11 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 15:02:35 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/22 15:41:49 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/25 18:42:50 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "../include/pipex.h"
 
 /**
  * @brief Computes the length of the string s excluding the terminating null 
@@ -21,9 +21,10 @@
 int	ft_strlen(char *s)
 {
 	int	i;
-
+	if (!s)
+		return (0);
 	i = 0;
-	while (s[i])
+	while (s[i] && s[i] != ' ')
 		i++;
 	return (i);
 }
@@ -75,6 +76,8 @@ char	*strcpys(char *dest, const char *src1, char c, const char *src2)
 {
 	size_t	i;
 
+	if (!src1 || !src2)
+		return (NULL);
 	i = 0;
 	while (*src1 != '\0')
 		dest[i++] = *src1++;

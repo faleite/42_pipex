@@ -6,11 +6,11 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 15:35:06 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/23 18:44:49 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/25 18:51:44 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "../include/pipex.h"
 
 /**
  * @brief The error case function, returns an error message, frees the data

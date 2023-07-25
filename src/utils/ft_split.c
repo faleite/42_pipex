@@ -6,11 +6,11 @@
 /*   By: faaraujo <faaraujo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 21:28:51 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/07/22 15:55:35 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/07/25 17:51:19 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "../include/pipex.h"
 
 /**
  * @brief Count how many substrings (words) are in a string
