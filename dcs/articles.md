@@ -28,7 +28,6 @@ int main()
 }
 ```
 
-
 o execve() é uma chamada de sistema que executa um programa.
 o programa é passado como parâmetro para o execve() e o processo
 atual é substituído pelo processo do programa que está sendo executado.
@@ -128,9 +127,6 @@ O código apresentado demonstra o uso do fork(), uma chamada de sistema no Linux
 9. `exit(EXIT_FAILURE);`: A função `exit()` encerra o programa com um status de saída. A constante `EXIT_FAILURE` é usada como argumento para indicar que o programa está encerrando devido a uma falha ou erro. O valor de `EXIT_FAILURE` é geralmente definido como um número diferente de zero para indicar um encerramento anormal do programa.
 
 Resumindo, o programa cria um novo processo filho a partir do processo pai usando a função `fork()`. O processo filho e o processo pai têm fluxos de execução independentes a partir do ponto em que o fork() é chamado. O processo filho é identificado pelo valor de retorno 0 do fork(), enquanto o processo pai tem um valor de retorno diferente de 0. O programa imprime uma mensagem indicando se é o processo filho ou o processo pai, juntamente com seus IDs (PIDs).
-
-
-
 
 ### pipe()
 
