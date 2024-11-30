@@ -15,9 +15,7 @@ projects that will appear later on in the cursus.*
 
  Skills | Grade |
 :------:|:-----:|
-[**Unix**] [**Imperative programming**] | [![faaraujo's 42 pipex Score](https://badge42.vercel.app/api/v2/clgrr2va0002108jo3cc5foww/project/3157803)](https://github.com/JaeSeoKim/badge42)  
-
-[![faaraujo's 42 stats](https://badge42.vercel.app/api/v2/clgrr2va0002108jo3cc5foww/stats?cursusId=21&coalitionId=112)](https://github.com/JaeSeoKim/badge42)
+[**Unix**] [**Imperative programming**] | **:white_check_mark: 119%** 
 
 ## Links
 ### Articles
